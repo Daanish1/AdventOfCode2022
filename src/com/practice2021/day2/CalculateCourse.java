@@ -82,6 +82,6 @@ public class CalculateCourse {
 
 
     public static void main(String[] args) {
-        System.out.println(solveSecond("input_2.txt"));
+        System.out.println(solveSecond("inputFiles/input_2.txt"));
     }
 }

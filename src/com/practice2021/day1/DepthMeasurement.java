@@ -62,7 +62,7 @@ public class DepthMeasurement {
 
 
     public static void main(String[] args) {
-        List<Integer> in = readInput("input_1.txt");
+        List<Integer> in = readInput("inputFiles/input_1.txt");
         System.out.println(in);
         System.out.println(howManyLarger(in));
 
