@@ -34,25 +34,6 @@ public class DayOne {
             return currentCount;
     }
 
-    public static List<String> readFile(String path) {
-        List<String> inputs = new ArrayList<>();
-        BufferedReader reader;
-        try {
-            reader = new BufferedReader(new FileReader(path));
-            String strCurrentLine;
-            while((strCurrentLine = reader.readLine()) != null) {
-                inputs.add(strCurrentLine);
-            }
-
-            return inputs;
-
-        } catch (IOException e) {
-            System.out.println("Error");
-            return null;
-        }
-
-    }
-
     public static int partTwo(List<String> input) {
         List<Integer> calorieCount = new ArrayList<>();
 
@@ -87,7 +68,7 @@ public class DayOne {
         List<String> input = FileReadHelper.fileToList("inputFiles/day1.txt", 1);
         System.out.println(partOne(input));
         System.out.println(partTwo(input));
-        
+
 
 
     }
