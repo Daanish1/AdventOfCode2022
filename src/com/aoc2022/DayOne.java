@@ -65,8 +65,7 @@ public class DayOne {
         System.out.println(partOne(input));
         System.out.println(partTwo(input));
 
-
-
+        
     }
 
 
