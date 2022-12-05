@@ -6,9 +6,14 @@ import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;
 
-public class DayOne {
+public class DayOne extends AOCBase{
 
-    public static int partOne(List<String> input) {
+    public DayOne(String day, int numberOfValues) {
+        super(day, numberOfValues);
+    }
+
+    @Override
+    public void solvePartOne(List<String> input) {
         int maxVal = 0;
 
         int currentCount = 0;
@@ -25,12 +30,14 @@ public class DayOne {
         }
 
         if (maxVal > currentCount)
-            return maxVal;
+            System.out.println(maxVal);
         else
-            return currentCount;
+            System.out.println(currentCount);
     }
 
-    public static int partTwo(List<String> input) {
+
+    @Override
+    public void solvePartTwo(List<String> input) {
         List<Integer> calorieCount = new ArrayList<>();
 
 
@@ -52,21 +59,9 @@ public class DayOne {
         int lastIndex = calorieCount.size()-1;
         int sum = calorieCount.get(lastIndex) + calorieCount.get(lastIndex-1) + calorieCount.get(lastIndex-2);
 
-        return sum;
+        System.out.println(sum);
 
 
     }
-
-
-
-
-    public static void main(String[] args) {
-        List<String> input = FileReadHelper.fileToList("inputFiles/day1.txt", 1);
-        System.out.println(partOne(input));
-        System.out.println(partTwo(input));
-
-        
-    }
-
 
 }

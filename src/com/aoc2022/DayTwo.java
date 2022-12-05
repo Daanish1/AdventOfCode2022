@@ -4,10 +4,15 @@ import com.common.usage.FileReadHelper;
 
 import java.util.List;
 
-public class DayTwo {
+public class DayTwo extends AOCBase {
+
+    public DayTwo(String day, int numberOfValues) {
+        super(day, numberOfValues);
+    }
 
 
-    public static int solveOne(List<String> input) {
+    @Override
+    public void solvePartOne(List<String> input) {
         int score = 0;
 
         for (int i = 0; i < input.size()-1; i+=2) {
@@ -27,11 +32,12 @@ public class DayTwo {
 
         }
 
-        return score;
+        System.out.println(score);
 
     }
 
-    public static int solveTwo(List<String> input) {
+    @Override
+    public void solvePartTwo(List<String> input) {
         int score = 0;
 
         for (int i = 0; i < input.size() - 1; i += 2) {
@@ -47,19 +53,18 @@ public class DayTwo {
                 score += 6 + ((opponentMove + 1) % 3) + 1;
             }
 
-
         }
 
-        return score;
+        System.out.println(score);
     }
 
 
 
-    public static void main(String[] args) {
-        List<String> input = FileReadHelper.fileToList("inputFiles/day2.txt", 2);
-        System.out.println(solveOne(input));
-        System.out.println(solveTwo(input));
-    }
+//    public static void main(String[] args) {
+//        List<String> input = FileReadHelper.fileToList("inputFiles/day2.txt", 2);
+//        System.out.println(solveOne(input));
+//        System.out.println(solveTwo(input));   //14416
+//    }
 
 
 }
