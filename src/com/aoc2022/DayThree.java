@@ -15,13 +15,16 @@ public class DayThree extends AOCBase{
     void solvePartOne(List<String> input) {
         int prioritySum = 0;
 
-        //arrayList.retainAll(otherList);
 
         for (int i = 0; i < input.size(); i++) {
             String fullRucksack = input.get(i);
 
-            List<Character> compartmentOne = new ArrayList<>();
-            List<Character> compartmentTwo = new ArrayList<>();
+            List<Character> compartmentOne = input.get(i).substring(0, input.get(i).length()/2).chars().mapToObj((j)
+                    -> Character.valueOf((char)j)).collect(Collectors.toList());
+
+            List<Character> compartmentTwo = input.get(i).substring(input.get(i).length()/2).chars().mapToObj((j)
+                    -> Character.valueOf((char)j)).collect(Collectors.toList());
+
 
             for (int j = 0; j < fullRucksack.length()/2; j++) {
                 compartmentOne.add(fullRucksack.charAt(j));
@@ -35,7 +38,6 @@ public class DayThree extends AOCBase{
             char mismatched = compartmentOne.get(0);
 
             if (mismatched <= 'Z') {
-
                 prioritySum += mismatched - 38;
             } else {
                 prioritySum += mismatched - 'a' + 1;
