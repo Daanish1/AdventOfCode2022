@@ -6,6 +6,8 @@ public class CoreAOCRunner {
     public static void main(String[] args) {
 
 //        new DayOne("1", 1);
-        new DayTwo("2", 2);
+//        new DayTwo("2", 2);
+        new DayThree("3", 1);
     }
+
 }
