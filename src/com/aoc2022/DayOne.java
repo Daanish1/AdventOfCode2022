@@ -1,7 +1,5 @@
 package com.aoc2022;
 
-import com.common.usage.FileReadHelper;
-
 import java.util.ArrayList;
 import java.util.Collections;
 import java.util.List;

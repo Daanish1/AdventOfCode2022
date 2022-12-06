@@ -1,9 +1,8 @@
 package com.practice2021.day3;
 
-import com.common.usage.FileReadHelper;
+import com.practice2021.FileReadHelper;
 
 import java.util.ArrayList;
-import java.util.Collections;
 import java.util.List;
 
 public class PowerConsumption {

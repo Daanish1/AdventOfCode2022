@@ -1,7 +1,5 @@
 package com.aoc2022;
 
-import com.common.usage.FileReadHelper;
-
 import java.util.List;
 
 public class DayTwo extends AOCBase {
