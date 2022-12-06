@@ -8,18 +8,28 @@ import java.util.List;
 
 abstract public class AOCBase {
 
-    public AOCBase(String currentDay, int valuesPerLine) {
-        List<String> inputs = fileToList("inputFiles/day"+currentDay+".txt", valuesPerLine);
 
+    public AOCBase(String currentDay) {
+        List<String> inputs = readFile("inputFiles/day"+currentDay+".txt");
+        computeOutput(currentDay, inputs);
+    }
+
+    public AOCBase(String currentDay, int valuesPerLine) {
+        List<String> inputs = fileToListWithValues("inputFiles/day"+currentDay+".txt", valuesPerLine);
+
+        computeOutput(currentDay, inputs);
+
+    }
+
+    public void computeOutput(String currentDay, List<String> inputs) {
         System.out.println("==========Day "+ currentDay + "==========");
         System.out.print("Part One: ");
         solvePartOne(inputs);
         System.out.print("Part Two: ");
         solvePartTwo(inputs);
-
     }
 
-    public List<String> fileToList(String inputPath, int valuesPerLine) {
+    public List<String> fileToListWithValues(String inputPath, int valuesPerLine) {
 
         List<String> inputs = new ArrayList<>();
         BufferedReader reader;
@@ -41,6 +51,26 @@ abstract public class AOCBase {
             return null;
         }
 
+    }
+
+    public List<String> readFile(String inputPath) {
+        List<String> inputs = new ArrayList<>();
+        BufferedReader reader;
+        try {
+            reader = new BufferedReader(new FileReader(inputPath));
+            String strCurrentLine;
+            while((strCurrentLine = reader.readLine()) != null) {
+
+                inputs.add(strCurrentLine);
+
+            }
+
+            return inputs;
+
+        } catch (IOException e) {
+            System.out.println("Error");
+            return null;
+        }
     }
 
     abstract void solvePartOne(List<String> input);
