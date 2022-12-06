@@ -5,7 +5,6 @@ import java.util.List;
 
 public class DayFour extends AOCBase {
 
-
     public DayFour(String currentDay, int valuesPerLine) {
         super(currentDay, valuesPerLine);
     }
@@ -20,12 +19,10 @@ public class DayFour extends AOCBase {
             int[] firstAssignment = Arrays.stream(splitted[0].split("-")).mapToInt(Integer::parseInt).toArray();
             int[] secondAssignment = Arrays.stream(splitted[1].split("-")).mapToInt(Integer::parseInt).toArray();
 
-
             if (((firstAssignment[0] >= secondAssignment[0]) && (firstAssignment[1] <= secondAssignment[1])) ||
                 ((secondAssignment[0] >= firstAssignment[0]) && (secondAssignment[1] <= firstAssignment[1]))) {
                 contained++;
             }
-
         }
 
         System.out.println(contained);
@@ -49,7 +46,6 @@ public class DayFour extends AOCBase {
             } else if ((secondAssignment[0] <= firstAssignment[1]) && (secondAssignment[1] >= firstAssignment[0])) {
                 overlaps++;
             }
-
 
         }
 
