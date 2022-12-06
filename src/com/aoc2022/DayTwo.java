@@ -57,12 +57,4 @@ public class DayTwo extends AOCBase {
     }
 
 
-
-//    public static void main(String[] args) {
-//        List<String> input = FileReadHelper.fileToList("inputFiles/day2.txt", 2);
-//        System.out.println(solveOne(input));
-//        System.out.println(solveTwo(input));   //14416
-//    }
-
-
 }

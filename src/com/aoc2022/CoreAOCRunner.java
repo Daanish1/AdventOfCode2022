@@ -9,8 +9,8 @@ public class CoreAOCRunner {
 //        new DayTwo("2", 2);
 //        new DayThree("3", 1);
 //        new DayFour("4", 1);
-        new DayFive("5");
-
+//        new DayFive("5");
+        new DaySix("6");
 
     }
 
